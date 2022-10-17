@@ -1,8 +1,9 @@
 import { sveltekit } from '@sveltejs/kit/vite'
+import { sveltesocket } from './socket-handler'
 import type { UserConfig } from 'vite'
 
 const config: UserConfig = {
-	plugins: [sveltekit()],
+	plugins: [sveltekit(), sveltesocket()],
 	build: {
 		rollupOptions: {
 			external: ['iconify-icon']
